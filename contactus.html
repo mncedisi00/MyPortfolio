@@ -81,7 +81,7 @@
             background-color: #0056b3;
         }
     </style>
-     <script src = "variables.js"></script>
+     <script src = "/variables.js"></script>
 </head>
 <body>
     
@@ -97,36 +97,54 @@
     <table>
         <tr>
             <td>Province:</td>
-
-            <td>${province}</td>
+            <td><script>document.write(province)</script></td>
         </tr>
         <tr>
             <td>City:</td>
-            <td>${city}</td>
+            <td><script>document.write(city)</script></td>
         </tr>
     </table>
     <div class="container">
         <h2>Contact Us</h2>
         <form class="contact-form" action="#" method="post">
             <div class="form-group">
-                <label for="name">${name}:</label>
+                <label for="name"><script>document.write(name)</script></label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="surname">${surname}:</label>
+                <label for="surname"><script>document.write(surname)</script></label>
                 <input type="text" id="surname" name="surname" required>
             </div>
             <div class="form-group">
-                <label for="email">${email}:</label>
+                <label for="email"><script>document.write(email)</script></label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">${message}:</label>
+                <label for="message"><script>document.write(message)</script></label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <input type="submit" value= ${submitButton}>
+            <input type="submit" value="<script>document.write(submitButton)</script>">
         </form>
     </div>
     <footer><p>Cellphone number: 0625591450 | Email:<a href="email">mncedisi.m2409@gmail.com</a> | Linkedin: <a href="linkedin">mncedisi mhlanga</a> | instagram:<a href="insta-handle"> mncedisi_00</a></p></footer>
+    
+    <script>
+        var province = "Gauteng";
+        var city = "Johannesburg";
+        var name = "Name:";
+        var surname = "Surname:";
+        var email = "EmailAdress:";
+        var message = "Message:";
+        var submitButton = "Submit";
+
+        document.getElementById("provincePlaceholder").innerHTML = province;
+        document.getElementById("cityPlaceholder").innerHTML = city;
+        document.getElementById("namePlaceholder").innerHTML = name;
+        document.getElementById("surnamePlaceholder").innerHTML = surname;
+        document.getElementById("emailPlaceholder").innerHTML = email;
+        document.getElementById("messagePlaceholder").innerHTML = message;
+        document.getElementById("submitButton").value = submitButton;
+    </script>
+
 </body>
 </html>
