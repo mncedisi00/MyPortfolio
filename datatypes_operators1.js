@@ -38,7 +38,6 @@ if(x !== y){
 }else{
     console.log('x is equal to y');
 }
-
 let a = true;
 let b = false;
 

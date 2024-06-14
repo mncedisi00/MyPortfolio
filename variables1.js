@@ -24,3 +24,5 @@ let favoriteColor = "Yellow";
   let quotient = num1/num2;
 
   console.log({sum,difference,product,quotient});
+
+
