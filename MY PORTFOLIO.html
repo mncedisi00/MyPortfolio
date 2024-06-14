@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        nav {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .bio {
+            width: 50%;
+        }
+        .address{
+            width: 60%;
+        }
+
+        .image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .video-container {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#"><img src="sun.png" alt="Sun" /></a>
+        <div>
+            <a href="#">Home</a>
+            <a href="Aboutme.html">About me</a>
+            <a href="contactus.html">Contact us</a>
+
+        </div>
+    </nav>
+    <h1>MCEDISI MHLANGA</h1>
+    <div class="video-container">
+        <video width="560" height="315" controls>
+            <source src="MyVid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <div class="bio">
+            <h2>BIO</h2>
+            <p id="bioPlaceholder"></p>
+        </div>
+        <div class="image">
+            <img src="myimage.jpg" alt="my Image"
+                style="width: 250px; height: auto; border-radius: 50%; border: 2px solid #ccc; ">
+        </div>
+    </div>
+    <div class="container">
+        <div class="bio">
+            <h2>Address</h2>
+            <p id="addressPlaceholder"></p>
+        </div>
+        <div class="image">
+            <img src="map.png" alt="map"
+                style="width: 250px; height: auto; ">
+        </div>
+    </div>
+    <footer><p>Cellphone number: 0625591450 | Email:<a href="email">mncedisi.m2409@gmail.com</a> | Linkedin: <a href="linkedin">mncedisi mhlanga</a> | instagram:<a href="insta-handle"> mncedisi_00</a></p></footer>
+    
+    <script>
+    var bio = "I am a young adult at the age of 23 this year. " +
+        "I was born and raised in Alexandra township where I also attended at Carter Primary School from the year 2008 - 2014. " +
+     "I then got a bursary from the Alexandra Education Committee (AEC) to attend a private high school in Randburg called " +
+     "Vuleka Sekolo Sa Borokgo (SSB) from 2014 - 2019. After matric, I was enrolled for a BSc in Mathematical Science in Mathematics and Computer Science " +
+    "at the University of Johannesburg but I could not finish my 3rd year due to financial constraints.";
+    var address = "11-8th avenue, " +
+                  "Alexandra, " +
+                  "Johannesburg, " +
+                  "2090";
+
+    document.getElementById("bioPlaceholder").innerHTML = bio;
+    document.getElementById("addressPlaceholder").innerHTML = address;
+</script>
+</body>
+
+</html>

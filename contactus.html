@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+        }
+        nav {
+            padding: 10px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+        }
+        nav a {
+            color: #000; 
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 100px; 
+            height: auto; 
+        }
+        .container {
+            border: 1px solid #ccc; 
+            padding: 20px;
+            margin-top: 20px; 
+            text-align: center;
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; 
+            flex-wrap: wrap; 
+        }
+        .bio {
+            width: 50%; 
+        }
+        .image {
+            width: 50%; 
+            text-align: center; 
+        }
+        .contact-form {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+     <script src = "/variables.js"></script>
+</head>
+<body>
+    
+    <nav>
+        <a href="#"><img src="sun.png" alt="Sun" /></a>
+        <div>
+            <a href="MY PORTFOLIO.html">Home</a>
+            <a href="Aboutme.html">About me</a>
+            <a href="#">Contact us</a>
+        </div>
+    </nav>
+    <h1>Contact us</h1>
+    <table>
+        <tr>
+            <td>Province:</td>
+            <td><script>document.write(province)</script></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><script>document.write(city)</script></td>
+        </tr>
+    </table>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name"><script>document.write(name)</script></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname"><script>document.write(surname)</script></label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><script>document.write(email)</script></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message"><script>document.write(message)</script></label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <input type="submit" value="<script>document.write(submitButton)</script>">
+        </form>
+    </div>
+    <footer><p>Cellphone number: 0625591450 | Email:<a href="email">mncedisi.m2409@gmail.com</a> | Linkedin: <a href="linkedin">mncedisi mhlanga</a> | instagram:<a href="insta-handle"> mncedisi_00</a></p></footer>
+    
+    <script>
+        var province = "Gauteng";
+        var city = "Johannesburg";
+        var name = "Name:";
+        var surname = "Surname:";
+        var email = "EmailAdress:";
+        var message = "Message:";
+        var submitButton = "Submit";
+
+        document.getElementById("provincePlaceholder").innerHTML = province;
+        document.getElementById("cityPlaceholder").innerHTML = city;
+        document.getElementById("namePlaceholder").innerHTML = name;
+        document.getElementById("surnamePlaceholder").innerHTML = surname;
+        document.getElementById("emailPlaceholder").innerHTML = email;
+        document.getElementById("messagePlaceholder").innerHTML = message;
+        document.getElementById("submitButton").value = submitButton;
+    </script>
+
+</body>
+</html>
